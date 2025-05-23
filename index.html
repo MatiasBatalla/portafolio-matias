@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> id="inicio">
+  <h1 style="color: green;">⚡ ESTO ES UNA PRUEBA CLARA DESDE GIT ⚡</h1>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 🚀 PROBANDO CAMBIO DESDE GIT 🚀</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #0078D7;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0078D7, #00B4DB);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #0078D7;
+      margin-bottom: 10px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #0078D7;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00B4DB;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p, main, .button {
+        font-size: 1rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Matias Batalla</strong></div>
+    <div>
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <header id="inicio">
+    <h1>Matias Batalla</h1>
+    <p>Apasionado por el análisis de datos y su representación gráfica.</p>
+  </header>
+
+  <main>
+    <section id="proyectos" class="project">
+      <h2><i class="fas fa-chart-line"></i> Dashboard Power BI – Mercado de Videojuegos</h2>
+      <img src="dashboard-videojuegos.jpg" alt="Vista previa del dashboard">
+      <p>
+        Este informe analiza tendencias del mercado de videojuegos, incluyendo géneros más populares,
+        plataformas y evolución de ventas. Fue realizado como parte del curso de CoderHouse.
+      </p>
+      <a class="button" href="Power BI- Dashboard Mercado de videojuegos (Matias Batalla 2025).pdf" target="_blank">
+        <i class="fas fa-file-pdf"></i> Ver PDF del informe
+      </a>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>Contacto: <a href="mailto:Matiaseb_10@hotmail.com" style="color: #00B4DB; text-decoration: none;">Matiaseb_10@hotmail.com</a></p>
+    <p>Teléfono: <a href="https://wa.me/541163628912" style="color: #00B4DB; text-decoration: none;">+54 11 6362 8912</a></p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/matiasbatalla" target="_blank"><i class="fab fa-linkedin"></i></a>
+     </div>
+  </footer>
+</body>
+</html>
