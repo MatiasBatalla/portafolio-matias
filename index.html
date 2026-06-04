@@ -747,55 +747,62 @@
     <h2 class="section-title">Trabajo aplicado</h2>
     <p class="section-desc">Proyectos reales con datos reales. Desde análisis de mercado hasta modelos financieros.</p>
 
-    <div class="projects-grid">
-      <a href="#contacto" class="project-card">
-        <span class="project-tag tag-finance">Finanzas & Energía</span>
-        <h3>Análisis Econométrico del Sector Energético Argentino</h3>
-        <p>Modelo de regresión que evalúa la correlación entre riesgo país, tipo de cambio y precios de acciones de YPF y Pampa Energía. Incluye series de tiempo y análisis de volatilidad macroeconómica.</p>
-        <div class="project-tools">
-          <span class="tool-badge">Power BI</span>
-          <span class="tool-badge">SQL</span>
-          <span class="tool-badge">Econometría</span>
-          <span class="tool-badge">Series de tiempo</span>
-        </div>
-        <div class="project-arrow">Ver proyecto →</div>
-      </a>
+    <div class="projects-grid" style="grid-template-columns: 1fr;">
 
-      <a href="https://matiasbatalla.github.io/portafolio-matias/Power BI- Dashboard Mercado de videojuegos (Matias Batalla 2025).pdf" target="_blank" class="project-card">
-        <span class="project-tag tag-data">Análisis de Datos</span>
-        <h3>Dashboard — Mercado de Videojuegos</h3>
-        <p>Dashboard interactivo en Power BI que analiza tendencias del mercado global de videojuegos: géneros más vendidos, plataformas líderes y evolución histórica de ventas. Proyecto del curso CoderHouse.</p>
+      <!-- YPF DASHBOARD - FEATURED -->
+      <div class="project-card" style="border-color: rgba(232,160,32,0.4);">
+        <span class="project-tag tag-finance">Finanzas & Energía</span>
+        <h3>Dashboard YPF vs Pampa Energía — Análisis 2020/2024</h3>
+        <p>Análisis comparativo de precios, retornos y volatilidad de YPF y Pampa Energía entre 2020 y 2024. Incluye evolución de precios mensuales, análisis de volatilidad anual, brecha de precios y un Executive Summary con conclusiones clave del período.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.25rem 0;">
+          <img src="ypf-page1.png" alt="YPF Price Analysis" style="width:100%; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+          <img src="ypf-page2.png" alt="YPF vs Pampa Comparative" style="width:100%; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+          <img src="ypf-page3.png" alt="Volatility & Risk Analysis" style="width:100%; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+          <img src="ypf-page4.png" alt="Executive Summary" style="width:100%; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+        </div>
+        <div style="background: rgba(232,160,32,0.1); border: 1px solid rgba(232,160,32,0.2); border-radius: 8px; padding: 1rem; margin-bottom: 1.25rem;">
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.6;"><strong style="color: var(--accent);">Conclusiones:</strong> YPF operó con un descuento promedio del 47% respecto a Pampa Energía en el período. Marzo 2020 registró la mayor volatilidad intra-mes (193%). En 2024 la volatilidad de PAM duplicó la de YPF, capturando mayor upside macroeconómico.</p>
+        </div>
         <div class="project-tools">
           <span class="tool-badge">Power BI</span>
           <span class="tool-badge">Excel</span>
-          <span class="tool-badge">Limpieza de datos</span>
-        </div>
-        <div class="project-arrow">Ver informe PDF →</div>
-      </a>
-
-      <div class="project-card" style="opacity: 0.6; cursor: default;">
-        <span class="project-tag tag-econ">En curso</span>
-        <h3>Tesis de Licenciatura — UNAJ 2025</h3>
-        <p>Investigación econométrica sobre valuación de empresas del sector energético y su relación con variables macroeconómicas argentinas. Disponible al finalizar.</p>
-        <div class="project-tools">
-          <span class="tool-badge">Econometría</span>
-          <span class="tool-badge">R / Python</span>
+          <span class="tool-badge">Análisis de volatilidad</span>
           <span class="tool-badge">Series de tiempo</span>
+          <span class="tool-badge">Valuación de activos</span>
         </div>
       </div>
 
-      <a href="#contacto" class="project-card">
-        <span class="project-tag tag-finance">BI & Gestión</span>
-        <h3>Tablero KPI — Secretaría PyME</h3>
-        <p>Dashboard de gestión en Looker Studio que monitoreaba más de 20 indicadores críticos para la toma de decisiones de la Secretaría de la Pequeña y Mediana Empresa del Ministerio de Industria.</p>
-        <div class="project-tools">
-          <span class="tool-badge">Looker Studio</span>
-          <span class="tool-badge">BigQuery</span>
-          <span class="tool-badge">SQL</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+        <!-- TESIS -->
+        <div class="project-card" style="opacity: 0.75; cursor: default;">
+          <span class="project-tag tag-econ">En curso — 2025</span>
+          <h3>Tesis de Licenciatura en Economía</h3>
+          <p>Análisis econométrico del sector energético argentino: YPF, Pampa Energía, Central Puerto y Edenor. Evalúa cómo el riesgo país, el Merval y el precio del petróleo impactan en el precio de sus acciones. Modelos de regresión y series de tiempo.</p>
+          <div class="project-tools">
+            <span class="tool-badge">Econometría</span>
+            <span class="tool-badge">Regresión múltiple</span>
+            <span class="tool-badge">Series de tiempo</span>
+            <span class="tool-badge">4 empresas</span>
+          </div>
         </div>
-        <div class="project-arrow">Consultar →</div>
-      </a>
+
+        <!-- VIDEOJUEGOS -->
+        <a href="Power BI- Dashboard Mercado de videojuegos (Matias Batalla 2025).pdf" target="_blank" class="project-card">
+          <span class="project-tag tag-data">Análisis de Datos</span>
+          <h3>Dashboard — Mercado de Videojuegos</h3>
+          <p>Dashboard interactivo en Power BI que analiza tendencias del mercado global de videojuegos: géneros más vendidos, plataformas líderes y evolución histórica de ventas. Proyecto del curso CoderHouse.</p>
+          <div class="project-tools">
+            <span class="tool-badge">Power BI</span>
+            <span class="tool-badge">Excel</span>
+            <span class="tool-badge">Limpieza de datos</span>
+          </div>
+          <div class="project-arrow">Ver informe PDF →</div>
+        </a>
+
+      </div>
     </div>
+
   </div>
 </div>
 
