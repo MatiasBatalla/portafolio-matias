@@ -1,195 +1,848 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matias Batalla | Portafolio Profesional</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matías Batalla | Economista & Analista de Datos</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    nav {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  :root {
+    --navy: #0f2240;
+    --navy-mid: #1a3a6b;
+    --blue: #1F5C99;
+    --blue-light: #d6e8f7;
+    --accent: #e8a020;
+    --accent-light: #fdf3e0;
+    --text: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --text-soft: #7a7a9a;
+    --surface: #f7f8fc;
+    --white: #ffffff;
+    --border: #e2e6f0;
+    --radius: 12px;
+    --radius-sm: 6px;
+  }
 
-    nav a {
-      color: #0078D7;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  html { scroll-behavior: smooth; }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--surface);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    header {
-      background: linear-gradient(135deg, #0078D7, #00B4DB);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
 
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+  .nav-links a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue); }
 
-    h2 {
-      font-size: 1.8rem;
-      color: #0078D7;
-      margin-bottom: 10px;
-    }
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px 6rem 4rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .project {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      padding: 20px;
-      margin-bottom: 30px;
-    }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31,92,153,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-    .project img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,160,32,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background-color: #0078D7;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
+  .hero-content { position: relative; z-index: 1; }
 
-    .button:hover {
-      background-color: #005fa3;
-    }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(232,160,32,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(232,160,32,0.3);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
 
-    .social-icons {
-      margin-top: 15px;
-    }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
 
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.4rem;
-      transition: color 0.3s ease;
-    }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
 
-    .social-icons a:hover {
-      color: #00B4DB;
-    }
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      header p, main, .button {
-        font-size: 1rem;
-      }
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  .btn-primary {
+    background: var(--accent);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: #f0b030; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
+  /* HERO STATS */
+  .hero-stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: background 0.2s;
+  }
+  .stat-card:hover { background: rgba(255,255,255,0.1); }
+
+  .stat-card .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-card .stat-number span {
+    color: var(--accent);
+  }
+
+  .stat-card p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+
+  /* SECTION WRAPPER */
+  .section {
+    padding: 6rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-mid);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* SOBRE MÍ */
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .sobre-text p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .sobre-text p strong { color: var(--navy); font-weight: 600; }
+
+  /* STACK */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stack-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.875rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .stack-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 2px 12px rgba(31,92,153,0.1);
+  }
+
+  .stack-icon {
+    width: 36px; height: 36px;
+    background: var(--blue-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .stack-item span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* EXPERIENCIA */
+  .exp-timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .exp-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue), transparent);
+  }
+
+  .exp-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+  }
+
+  .exp-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem; top: 8px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 2px solid var(--surface);
+  }
+
+  .exp-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .exp-date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+
+  .exp-place {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+  }
+
+  .exp-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+
+  .exp-item ul {
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+  }
+
+  .exp-item ul li {
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* PROYECTOS */
+  .projects-bg {
+    background: var(--navy);
+    padding: 6rem 0;
+  }
+
+  .projects-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6rem;
+  }
+
+  .projects-inner .section-title { color: #fff; }
+  .projects-inner .section-label { color: var(--accent); }
+  .projects-inner .section-desc { color: rgba(255,255,255,0.6); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: block;
+  }
+  .project-card:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+  }
+
+  .project-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .tag-finance { background: rgba(31,92,153,0.25); color: #7eb8f5; }
+  .tag-data { background: rgba(232,160,32,0.2); color: #f0c060; }
+  .tag-econ { background: rgba(29,158,117,0.2); color: #5dcaa5; }
+
+  .project-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tool-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .project-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: 1.25rem;
+  }
+
+  /* LOGROS */
+  .logros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .logro-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    border-top: 3px solid var(--blue);
+    transition: box-shadow 0.2s;
+  }
+  .logro-card:hover { box-shadow: 0 4px 20px rgba(31,92,153,0.1); }
+
+  .logro-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .logro-card p {
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+
+  /* CONTACTO */
+  .contact-bg {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 6rem 0;
+  }
+
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .contact-link:hover {
+    border-color: var(--blue);
+    background: var(--blue-light);
+  }
+
+  .contact-link-icon {
+    width: 38px; height: 38px;
+    background: var(--blue-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-link-text strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .contact-link-text span {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    border-top: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 80px 2rem 3rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .section { padding: 4rem 2rem; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-inner { padding: 0 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .logros-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr; padding: 0 2rem; }
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <div><strong>Matias Batalla</strong></div>
+
+<nav>
+  <a href="#inicio" class="nav-logo">MB</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-tag">Disponible para trabajar</div>
+    <h1>Matías<br>Batalla<em>.</em></h1>
+    <p class="hero-desc">Economista y analista de datos con experiencia en Business Intelligence, SQL y dashboards financieros en el sector público. Berazategui, Buenos Aires.</p>
+    <div class="hero-ctas">
+      <a href="CV_Matías Batalla.pdf" download class="btn-primary">Descargar CV</a>
+      <a href="#proyectos" class="btn-outline">Ver proyectos</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-number">+<span>20</span></div>
+      <p>KPIs monitoreados en dashboards para la Secretaría PyME</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number"><span>1K</span>+</div>
+      <p>Registros auditados mensualmente con 90% de precisión</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number"><span>10</span>/10</div>
+      <p>Promedio en certificación Data Analytics — CoderHouse</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number"><span>36</span></div>
+      <p>Materias aprobadas de la Licenciatura en Economía (UNAJ)</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="section" id="sobre">
+  <div class="sobre-grid">
     <div>
-      <a href="#inicio">Inicio</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <p class="section-label">Sobre mí</p>
+      <h2 class="section-title">Datos que cuentan historias</h2>
+      <div class="sobre-text">
+        <p>Soy economista (Licenciatura en curso, tesis pendiente en UNAJ) con <strong>1 año de experiencia como Analista Junior</strong> en el Ministerio de Industria y Desarrollo Productivo. Trabajo con SQL, BigQuery, Power BI y Excel avanzado para transformar datos en decisiones.</p>
+        <p>Durante mi pasantía diseñé dashboards que monitoreaban más de <strong>20 KPIs críticos</strong> para la Secretaría PyME y automaticé reportes reduciendo significativamente los tiempos de consulta.</p>
+        <p>Actualmente finalizo mi tesis con un análisis econométrico del sector energético argentino (YPF / Pampa Energía), estudiando la correlación entre tipo de cambio, riesgo país y precios de activos.</p>
+      </div>
     </div>
-  </nav>
-
-  <header id="inicio">
-    <h1>Matias Batalla</h1>
-    <p>Apasionado por el análisis de datos y su representación gráfica.</p>
-  </header>
-<section id="cv" class="project">
-  <h2><i class="fas fa-file"></i> Mi CV</h2>
-  <p>Puedes descargar mi CV en PDF para más información sobre mi experiencia y formación.</p>
-  <a class="button" href="CV_Matías Batalla.pdf" target="_blank">
-    <i class="fas fa-file-pdf"></i> Descargar CV
-  </a>
+    <div>
+      <p class="section-label" style="margin-bottom: 1rem;">Stack técnico</p>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-icon">🗄️</div><span>SQL & BigQuery</span></div>
+        <div class="stack-item"><div class="stack-icon">📊</div><span>Power BI</span></div>
+        <div class="stack-item"><div class="stack-icon">📈</div><span>Looker Studio</span></div>
+        <div class="stack-item"><div class="stack-icon">📋</div><span>Excel Avanzado</span></div>
+        <div class="stack-item"><div class="stack-icon">📉</div><span>Econometría</span></div>
+        <div class="stack-item"><div class="stack-icon">💰</div><span>Valuación de activos</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-  <main>
-    <section id="sobre-mi" class="project">
-  <h2><i class="fas fa-user"></i> Sobre mí</h2>
-  <p>
-    Soy Matias Batalla, un entusiasta del análisis de datos con experiencia en Power BI y visualización. Me apasiona transformar datos en insights claros y valiosos para la toma de decisiones.
-  </p>
-</section>
-    <section id="proyectos" class="project">
-      <h2><i class="fas fa-chart-line"></i> Dashboard Power BI – Mercado de Videojuegos</h2>
-      <img src="dashboard-videojuegos.jpg" alt="Vista previa del dashboard">
-      <p>
-        Este informe analiza tendencias del mercado de videojuegos, incluyendo géneros más populares,
-        plataformas y evolución de ventas. Fue realizado como parte del curso de CoderHouse.
-      </p>
-      <a class="button" href="Power BI- Dashboard Mercado de videojuegos (Matias Batalla 2025).pdf" target="_blank">
-        <i class="fas fa-file-pdf"></i> Ver PDF del informe
-      </a>
-    <a class="button" href="#contacto" style="background-color: #555; margin-left: 10px;">
-      <i class="fas fa-envelope"></i> Pedir archivo interactivo
-      </a>
-    </section>
-  </main>
+<div class="divider"></div>
 
-  <footer id="contacto">
-    <p>Contacto: <a href="mailto:Matiaseb_10@hotmail.com" style="color: #00B4DB; text-decoration: none;">Matiaseb_10@hotmail.com</a></p>
-    <p>Teléfono: <a href="https://wa.me/541163628912" style="color: #00B4DB; text-decoration: none;">+54 11 6362 8912</a></p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/matiasbatalla" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/matiasbatalla" target="_blank"><i class="fab fa-github"></i></a>
+<!-- EXPERIENCIA -->
+<section class="section" id="experiencia">
+  <p class="section-label">Trayectoria</p>
+  <h2 class="section-title">Experiencia & Formación</h2>
+  <p class="section-desc">Perfil orientado a resultados con base académica sólida y aplicación real en el sector público.</p>
+
+  <div class="exp-timeline">
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-date">Ago 2023 – Feb 2024</span>
+        <span class="exp-place">Ministerio de Industria y Desarrollo Productivo</span>
+      </div>
+      <h3>Analista Junior — Área PyME</h3>
+      <ul>
+        <li>Diseño y mantenimiento de dashboards en Looker Studio monitoreando +20 KPIs críticos (desembolsos, stock de expedientes, solicitudes).</li>
+        <li>Análisis y validación de datos financieros del universo PyME nacional para informes de gestión.</li>
+        <li>Automatización de reportes para la Secretaría PyME, reduciendo tiempos de consulta significativamente.</li>
+        <li>Auditoría de +1.000 registros mensuales con índice de precisión del 90%.</li>
+        <li>Extracción y manipulación de datos con SQL y BigQuery desde múltiples fuentes.</li>
+      </ul>
     </div>
-  </footer>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-date">2025 – Actualidad</span>
+        <span class="exp-place">UNAJ</span>
+      </div>
+      <h3>Investigación de Tesis — Licenciatura en Economía</h3>
+      <ul>
+        <li>Análisis econométrico de YPF y Pampa Energía frente a variables macroeconómicas.</li>
+        <li>Modelos de regresión para correlacionar tipo de cambio, riesgo país y precios de activos.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-date">2020 – Actualidad</span>
+        <span class="exp-place">Universidad Nacional Arturo Jauretche</span>
+      </div>
+      <h3>Licenciatura en Economía</h3>
+      <ul>
+        <li>36 materias aprobadas en tiempo y forma. Tesis final en curso.</li>
+        <li>Título intermedio de Analista Económico obtenido en 2023.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta">
+        <span class="exp-date">2024 – 2025</span>
+        <span class="exp-place">CoderHouse</span>
+      </div>
+      <h3>Certificaciones en Data Analytics</h3>
+      <ul>
+        <li>Data Analytics — Promedio 10/10.</li>
+        <li>Procesamiento de Datos Avanzado en Excel — Promedio 9/10.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LOGROS -->
+<section style="background: var(--blue-light); padding: 4rem 0;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 6rem;">
+    <div class="logros-grid">
+      <div class="logro-card">
+        <div class="logro-num">90%</div>
+        <p>Índice de precisión en auditoría mensual de registros financieros</p>
+      </div>
+      <div class="logro-card">
+        <div class="logro-num">+20</div>
+        <p>KPIs monitoreados en dashboards para la dirección estratégica</p>
+      </div>
+      <div class="logro-card">
+        <div class="logro-num">10/10</div>
+        <p>Promedio en certificación Data Analytics — CoderHouse 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<div class="projects-bg" id="proyectos">
+  <div class="projects-inner">
+    <p class="section-label">Proyectos</p>
+    <h2 class="section-title">Trabajo aplicado</h2>
+    <p class="section-desc">Proyectos reales con datos reales. Desde análisis de mercado hasta modelos financieros.</p>
+
+    <div class="projects-grid">
+      <a href="#contacto" class="project-card">
+        <span class="project-tag tag-finance">Finanzas & Energía</span>
+        <h3>Análisis Econométrico del Sector Energético Argentino</h3>
+        <p>Modelo de regresión que evalúa la correlación entre riesgo país, tipo de cambio y precios de acciones de YPF y Pampa Energía. Incluye series de tiempo y análisis de volatilidad macroeconómica.</p>
+        <div class="project-tools">
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">SQL</span>
+          <span class="tool-badge">Econometría</span>
+          <span class="tool-badge">Series de tiempo</span>
+        </div>
+        <div class="project-arrow">Ver proyecto →</div>
+      </a>
+
+      <a href="https://matiasbatalla.github.io/portafolio-matias/Power BI- Dashboard Mercado de videojuegos (Matias Batalla 2025).pdf" target="_blank" class="project-card">
+        <span class="project-tag tag-data">Análisis de Datos</span>
+        <h3>Dashboard — Mercado de Videojuegos</h3>
+        <p>Dashboard interactivo en Power BI que analiza tendencias del mercado global de videojuegos: géneros más vendidos, plataformas líderes y evolución histórica de ventas. Proyecto del curso CoderHouse.</p>
+        <div class="project-tools">
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">Excel</span>
+          <span class="tool-badge">Limpieza de datos</span>
+        </div>
+        <div class="project-arrow">Ver informe PDF →</div>
+      </a>
+
+      <div class="project-card" style="opacity: 0.6; cursor: default;">
+        <span class="project-tag tag-econ">En curso</span>
+        <h3>Tesis de Licenciatura — UNAJ 2025</h3>
+        <p>Investigación econométrica sobre valuación de empresas del sector energético y su relación con variables macroeconómicas argentinas. Disponible al finalizar.</p>
+        <div class="project-tools">
+          <span class="tool-badge">Econometría</span>
+          <span class="tool-badge">R / Python</span>
+          <span class="tool-badge">Series de tiempo</span>
+        </div>
+      </div>
+
+      <a href="#contacto" class="project-card">
+        <span class="project-tag tag-finance">BI & Gestión</span>
+        <h3>Tablero KPI — Secretaría PyME</h3>
+        <p>Dashboard de gestión en Looker Studio que monitoreaba más de 20 indicadores críticos para la toma de decisiones de la Secretaría de la Pequeña y Mediana Empresa del Ministerio de Industria.</p>
+        <div class="project-tools">
+          <span class="tool-badge">Looker Studio</span>
+          <span class="tool-badge">BigQuery</span>
+          <span class="tool-badge">SQL</span>
+        </div>
+        <div class="project-arrow">Consultar →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contact-bg" id="contacto">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label">Contacto</p>
+      <h2 class="section-title">Hablemos</h2>
+      <p class="section-desc" style="margin-bottom: 0;">Estoy en búsqueda activa de oportunidades en finanzas, análisis de datos o control de gestión. Disponibilidad full time, presencial o híbrido en GBA / CABA.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:Matiaseb27@gmail.com" class="contact-link">
+        <div class="contact-link-icon">✉️</div>
+        <div class="contact-link-text">
+          <strong>Email</strong>
+          <span>Matiaseb27@gmail.com</span>
+        </div>
+      </a>
+      <a href="https://wa.me/541163628912" target="_blank" class="contact-link">
+        <div class="contact-link-icon">📱</div>
+        <div class="contact-link-text">
+          <strong>WhatsApp</strong>
+          <span>+54 11 6362-8912</span>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/matiasbatalla27" target="_blank" class="contact-link">
+        <div class="contact-link-icon">💼</div>
+        <div class="contact-link-text">
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/matiasbatalla27</span>
+        </div>
+      </a>
+      <a href="https://github.com/matiasbatalla" target="_blank" class="contact-link">
+        <div class="contact-link-icon">💻</div>
+        <div class="contact-link-text">
+          <strong>GitHub</strong>
+          <span>github.com/matiasbatalla</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Matías Batalla · Economista & Analista de Datos · Berazategui, Buenos Aires</p>
+</footer>
+
 </body>
 </html>
