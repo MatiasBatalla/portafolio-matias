@@ -2,9 +2,9 @@
 
 Econometric analysis of 25 years of monthly returns of YPF's NYSE-listed ADR (May 2000 – Sep 2025), measuring how much they relate to **domestic** risk (Argentine country risk and the CCL exchange rate) versus **global** energy factors (Brent crude and the US energy sector).
 
-Undergraduate thesis research · B.A. in Economics, Universidad Nacional Arturo Jauretche (UNAJ).
+Independent analysis by Matías Batalla · B.A. in Economics candidate, Universidad Nacional Arturo Jauretche (UNAJ).
 
-**[Interactive dashboard (English)](https://matiasbatalla.github.io/portafolio-matias/tesis-ypf/)** · **[Versión en español](https://matiasbatalla.github.io/portafolio-matias/tesis-ypf/es.html)** · **[Notebook](notebooks/ypf_regression.ipynb)**
+**[Interactive dashboard (English)](https://matiasbatalla.github.io/portafolio-matias/analisis-ypf/)** · **[Versión en español](https://matiasbatalla.github.io/portafolio-matias/analisis-ypf/es.html)** · **[Notebook](notebooks/ypf_regression.ipynb)**
 
 ![Effect of a typical month](figures/effects.png)
 

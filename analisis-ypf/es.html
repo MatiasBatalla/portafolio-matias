@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>What moves YPF's stock?</title>
-<meta name="description" content="Regression analysis of 25 years of YPF ADR returns against Argentine country risk, the CCL exchange rate, Brent and the US energy sector.">
+<title>¿Qué mueve a la acción de YPF?</title>
+<meta name="description" content="Análisis de regresión de 25 años de retornos del ADR de YPF frente al riesgo país, el dólar CCL, el Brent y el sector energético de EE.UU.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="What moves YPF's stock? Argentine macro risk vs. global energy">
-<meta property="og:description" content="Interactive dashboard: 25 years of YPF ADR returns vs. country risk, the CCL exchange rate, Brent and the US energy sector. By Matías Batalla.">
-<meta property="og:image" content="https://matiasbatalla.github.io/portafolio-matias/tesis-ypf-precio.png">
-<meta property="og:url" content="https://matiasbatalla.github.io/portafolio-matias/tesis-ypf/">
+<meta property="og:title" content="¿Qué mueve a la acción de YPF? Riesgo macro argentino vs. energía global">
+<meta property="og:description" content="Dashboard interactivo: 25 años de retornos del ADR de YPF frente al riesgo país, el dólar CCL, el Brent y el sector energético de EE.UU. Por Matías Batalla.">
+<meta property="og:image" content="https://matiasbatalla.github.io/portafolio-matias/analisis-ypf-precio.png">
+<meta property="og:url" content="https://matiasbatalla.github.io/portafolio-matias/analisis-ypf/es.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 </style>
 </head>
 <body>
-<nav class="yx-lang" aria-label="Language"><a href="index.html" aria-current="page">English</a><a href="es.html">Español</a></nav>
+<nav class="yx-lang" aria-label="Language"><a href="index.html">English</a><a href="es.html" aria-current="page">Español</a></nav>
 <style>
 .yx { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); max-width: 76rem; margin-inline: auto; }
 .yx-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
@@ -124,116 +124,116 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 
 <div class="yx">
   <header class="yx-head" id="top">
-    <p class="yx-eyebrow">Equity sensitivity analysis · Argentine energy sector</p>
-    <h1>What moves YPF's stock? Argentine macro risk vs. global energy</h1>
-    <p class="yx-take">Across <b data-draw="fit" data-source="model_fit" data-field="n_obs">—</b> months of YPF's NYSE-listed ADR, a typical one-standard-deviation move in Brent goes with a <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=brent">—</b> change in the monthly return, the US energy sector with <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=us_energy">—</b>, and the CCL exchange rate with <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=ccl">—</b>. Country risk adds only <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=country_risk">—</b> on the full sample (p = <b data-draw="pv" data-source="model_coefficients" data-field="p_value" data-where="term=country_risk">—</b>), but becomes significant once the 2001–2005 default years are left out (p = <b data-draw="pv" data-source="robustness" data-field="p_country_risk" data-where="spec_id=10">—</b>). The results are consistent with YPF being priced as both a global oil company and an Argentine peso asset.</p>
-    <p class="yx-by">Matías Batalla · B.A. in Economics, Universidad Nacional Arturo Jauretche · Undergraduate thesis research</p>
+    <p class="yx-eyebrow">Análisis de sensibilidad bursátil · Sector energético argentino</p>
+    <h1>¿Qué mueve a la acción de YPF? Riesgo macro argentino vs. energía global</h1>
+    <p class="yx-take">En <b data-draw="fit" data-source="model_fit" data-field="n_obs">—</b> meses del ADR de YPF en Nueva York, un movimiento típico (un desvío estándar) del Brent se asocia con un cambio de <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=brent">—</b> en el retorno mensual; el sector energético de EE.UU., con <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=us_energy">—</b>; y el dólar CCL, con <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=ccl">—</b>. El riesgo país aporta solo <b data-draw="eff" data-source="std_effects" data-field="effect" data-where="term=country_risk">—</b> en la muestra completa (p = <b data-draw="pv" data-source="model_coefficients" data-field="p_value" data-where="term=country_risk">—</b>, pero se vuelve significativo al excluir los años del default 2001–2005 (p = <b data-draw="pv" data-source="robustness" data-field="p_country_risk" data-where="spec_id=10">—</b>). Los resultados son consistentes con que el mercado valúa a YPF a la vez como petrolera global y como activo argentino expuesto al peso.</p>
+    <p class="yx-by">Matías Batalla · Licenciatura en Economía, Universidad Nacional Arturo Jauretche · Análisis propio</p>
   </header>
 
-  <section class="yx-tiles" aria-label="Headline figures">
+  <section class="yx-tiles" aria-label="Cifras principales">
     <div class="yx-tile">
-      <span class="yx-tile-label">Variance explained (adj. R²)</span>
+      <span class="yx-tile-label">Varianza explicada (R² ajustado)</span>
       <span class="yx-tile-value" data-draw="fit" data-source="model_fit" data-field="adj_r2">—</span>
-      <span class="yx-tile-note">Final model, monthly log returns</span>
+      <span class="yx-tile-note">Modelo final, retornos logarítmicos mensuales</span>
     </div>
     <div class="yx-tile">
-      <span class="yx-tile-label">Sample</span>
+      <span class="yx-tile-label">Muestra</span>
       <span class="yx-tile-value"><span data-draw="fit" data-source="model_fit" data-field="sample_start">—</span> – <span data-draw="fit" data-source="model_fit" data-field="sample_end">—</span></span>
-      <span class="yx-tile-note"><span data-draw="fit" data-source="model_fit" data-field="n_obs">—</span> monthly observations</span>
+      <span class="yx-tile-note"><span data-draw="fit" data-source="model_fit" data-field="n_obs">—</span> observaciones mensuales</span>
     </div>
     <div class="yx-tile">
-      <span class="yx-tile-label">Annualized volatility</span>
+      <span class="yx-tile-label">Volatilidad anualizada</span>
       <span class="yx-tile-value" data-draw="stat" data-source="price_stats" data-field="ann_vol">—</span>
-      <span class="yx-tile-note">Std. dev. of monthly log returns × √12</span>
+      <span class="yx-tile-note">Desvío estándar de los retornos mensuales × √12</span>
     </div>
     <div class="yx-tile">
-      <span class="yx-tile-label">Maximum drawdown</span>
+      <span class="yx-tile-label">Caída máxima desde un pico</span>
       <span class="yx-tile-value" data-draw="stat" data-source="price_stats" data-field="max_drawdown">—</span>
-      <span class="yx-tile-note">From <span data-draw="stat" data-source="price_stats" data-field="dd_peak">—</span> to <span data-draw="stat" data-source="price_stats" data-field="dd_trough">—</span>, ADR close in USD</span>
+      <span class="yx-tile-note">De <span data-draw="stat" data-source="price_stats" data-field="dd_peak">—</span> a <span data-draw="stat" data-source="price_stats" data-field="dd_trough">—</span>, cierre del ADR en USD</span>
     </div>
   </section>
 
   <section class="yx-section" id="price">
-    <h2>Twenty-five years of YPF in dollars</h2>
+    <h2>Veinticinco años de YPF en dólares</h2>
     <div class="yx-card">
-      <h3>YPF ADR monthly close (USD, log scale)</h3>
-      <p class="yx-sub">Lettered lines mark the shocks the model controls for or tests as robustness. Hover for monthly values.</p>
+      <h3>Cierre mensual del ADR de YPF (USD, escala logarítmica)</h3>
+      <p class="yx-sub">Las líneas con letra marcan los shocks que el modelo controla o prueba en la robustez. Pasá el cursor para ver cada mes.</p>
       <div class="yx-chart dash-skeleton" id="price-chart" data-draw="price" data-source="ypf_monthly"></div>
       <ul class="yx-events">
-        <li><b>A</b>Dec 2001 · default and end of convertibility</li>
-        <li><b>B</b>Feb 2009 · global financial crisis</li>
-        <li><b>C</b>Apr 2012 · expropriation of Repsol's stake</li>
-        <li><b>D</b>Aug 2019 · PASO primary shock</li>
-        <li><b>E</b>Mar 2020 · COVID-19</li>
+        <li><b>A</b>Dic. 2001 · default y fin de la convertibilidad</li>
+        <li><b>B</b>Feb. 2009 · crisis financiera global</li>
+        <li><b>C</b>Abr. 2012 · expropiación de las acciones de Repsol</li>
+        <li><b>D</b>Ago. 2019 · shock de las PASO</li>
+        <li><b>E</b>Mar. 2020 · COVID-19</li>
       </ul>
     </div>
   </section>
 
   <section class="yx-section" id="drivers">
-    <h2>The candidate drivers</h2>
-    <p>Two domestic risk measures (the CCL dollar and sovereign country risk) and two global ones (Brent crude and the S&amp;P 500 Energy index).</p>
+    <h2>Las variables explicativas</h2>
+    <p>Dos medidas de riesgo doméstico (el dólar CCL y el riesgo país) y dos globales (el petróleo Brent y el índice S&amp;P 500 Energy).</p>
     <div class="yx-grid2">
       <div class="yx-card">
-        <h3>Brent crude (USD per barrel)</h3>
-        <p class="yx-sub">Global · monthly close</p>
+        <h3>Petróleo Brent (USD por barril)</h3>
+        <p class="yx-sub">Global · cierre mensual</p>
         <div class="yx-chart yx-small dash-skeleton" data-draw="driver" data-var="brent_usd" data-group="global" data-source="ypf_monthly"></div>
       </div>
       <div class="yx-card">
-        <h3>S&amp;P 500 Energy index</h3>
-        <p class="yx-sub">Global · monthly close; enters the model net of oil</p>
+        <h3>Índice S&amp;P 500 Energy</h3>
+        <p class="yx-sub">Global · cierre mensual; entra al modelo neto del petróleo</p>
         <div class="yx-chart yx-small dash-skeleton" data-draw="driver" data-var="us_energy_index" data-group="global" data-source="ypf_monthly"></div>
       </div>
       <div class="yx-card">
-        <h3>CCL exchange rate (ARS per USD, log scale)</h3>
-        <p class="yx-sub">Domestic · spliced series, see methodology</p>
+        <h3>Dólar CCL (ARS por USD, escala logarítmica)</h3>
+        <p class="yx-sub">Doméstico · serie empalmada, ver metodología</p>
         <div class="yx-chart yx-small dash-skeleton" data-draw="driver" data-var="ccl_ars_usd" data-group="domestic" data-log="1" data-source="ypf_monthly"></div>
       </div>
       <div class="yx-card">
-        <h3>Country risk (EMBI spread, bp)</h3>
-        <p class="yx-sub">Domestic · monthly average</p>
+        <h3>Riesgo país (spread EMBI, pb)</h3>
+        <p class="yx-sub">Doméstico · promedio mensual</p>
         <div class="yx-chart yx-small dash-skeleton" data-draw="driver" data-var="country_risk_bp" data-group="domestic" data-source="ypf_monthly"></div>
       </div>
     </div>
   </section>
 
   <section class="yx-section" id="results">
-    <h2>What the regression suggests</h2>
-    <p>OLS on monthly log returns with heteroskedasticity-robust (White/HC1) standard errors. Coefficients measure association, not causation.</p>
+    <h2>Qué sugiere la regresión</h2>
+    <p>MCO sobre retornos logarítmicos mensuales con errores estándar robustos a heterocedasticidad (White/HC1). Los coeficientes miden asociación, no causalidad.</p>
     <div class="yx-grid">
       <div class="yx-card">
-        <h3>Effect of a typical month</h3>
-        <p class="yx-sub">Change in YPF's monthly return after a one-standard-deviation move in each driver, holding the others fixed. This puts variables measured in different units on one scale.</p>
-        <p class="yx-legend"><span><span class="yx-sw yx-sw-dom"></span>Domestic</span><span><span class="yx-sw yx-sw-glob"></span>Global</span></p>
+        <h3>Efecto de un mes típico</h3>
+        <p class="yx-sub">Cambio en el retorno mensual de YPF ante un movimiento de un desvío estándar en cada variable, con las demás constantes. Así se comparan variables medidas en unidades distintas.</p>
+        <p class="yx-legend"><span><span class="yx-sw yx-sw-dom"></span>Doméstico</span><span><span class="yx-sw yx-sw-glob"></span>Global</span></p>
         <div class="yx-chart yx-bars dash-skeleton" id="effects-chart" data-draw="effects" data-source="std_effects"></div>
       </div>
       <div class="yx-card">
-        <h3>Return vs. one driver</h3>
-        <p class="yx-sub">Each dot is a month. The line is a simple one-variable fit; red dots are the shock months the dummies absorb.</p>
+        <h3>Retorno vs. una variable</h3>
+        <p class="yx-sub">Cada punto es un mes. La línea es un ajuste simple con una sola variable; los puntos rojos son los meses de shock que absorben las dummies.</p>
         <div class="yx-controls">
-          <label for="yx-scatter-pick">Plot YPF's return against</label>
+          <label for="yx-scatter-pick">Graficar el retorno de YPF contra</label>
           <select id="yx-scatter-pick" class="yx-scatter-pick">
-            <option value="ccl">CCL exchange rate</option>
-            <option value="brent">Brent crude</option>
-            <option value="us_energy">US energy sector (net of oil)</option>
-            <option value="country_risk">Country risk</option>
+            <option value="ccl">Dólar CCL</option>
+            <option value="brent">Petróleo Brent</option>
+            <option value="us_energy">Sector energético EE.UU. (neto del petróleo)</option>
+            <option value="country_risk">Riesgo país</option>
           </select>
         </div>
         <div class="yx-chart dash-skeleton" id="scatter-chart" data-draw="scatter" data-source="model_base bivariate"></div>
-        <p class="yx-note">Simple slope <b data-draw="biv" data-source="bivariate" data-field="slope" data-where="term=ccl">—</b> · correlation <b data-draw="biv" data-source="bivariate" data-field="corr" data-where="term=ccl">—</b> (country risk measured per 100 bp)</p>
+        <p class="yx-note">Pendiente simple <b data-draw="biv" data-source="bivariate" data-field="slope" data-where="term=ccl">—</b> · correlación <b data-draw="biv" data-source="bivariate" data-field="corr" data-where="term=ccl">—</b> (riesgo país medido cada 100 pb)</p>
       </div>
     </div>
     <div class="yx-card">
-      <h3>Final model coefficients</h3>
-      <p class="yx-sub">Adj. R² <b data-draw="fit" data-source="model_fit" data-field="adj_r2">—</b> · F = <b data-draw="fit" data-source="model_fit" data-field="f_stat">—</b>. Dummies report classical standard errors, since each flags only one or two months and the robust error collapses there.</p>
+      <h3>Coeficientes del modelo final</h3>
+      <p class="yx-sub">R² ajustado <b data-draw="fit" data-source="model_fit" data-field="adj_r2">—</b> · F = <b data-draw="fit" data-source="model_fit" data-field="f_stat">—</b>. Las dummies informan errores estándar clásicos: cada una marca uno o dos meses y ahí el error robusto colapsa.</p>
       <div class="yx-tablewrap">
         <table class="yx-table" id="coef-table" data-source="model_coefficients" data-row-key="term">
           <thead><tr>
             <th data-field="label">Variable</th>
-            <th data-field="coef">Coefficient</th>
-            <th data-field="std_error">Std. error</th>
-            <th data-field="p_value">p-value</th>
-            <th data-field="ci_low">95% CI low</th>
-            <th data-field="ci_high">95% CI high</th>
+            <th data-field="coef">Coeficiente</th>
+            <th data-field="std_error">Error estándar</th>
+            <th data-field="p_value">Valor p</th>
+            <th data-field="ci_low">IC 95% inf.</th>
+            <th data-field="ci_high">IC 95% sup.</th>
           </tr></thead>
           <tbody data-draw="coef-rows"></tbody>
         </table>
@@ -242,53 +242,53 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   </section>
 
   <section class="yx-section" id="robustness">
-    <h2>Does it hold up?</h2>
-    <p>Fifteen alternative specifications. The Brent and CCL results survive almost every test; country risk is the fragile one, and turns significant only in the post-2006 samples.</p>
+    <h2>¿Resiste otras especificaciones?</h2>
+    <p>Quince especificaciones alternativas. Los resultados del Brent y del CCL se sostienen en casi todas; el riesgo país es el más frágil y solo resulta significativo en las muestras posteriores a 2006.</p>
     <div class="yx-card">
-      <h3>p-values across specifications</h3>
-      <p class="yx-legend"><span><span class="yx-chip yx-p1">p &lt; 0.05</span></span><span><span class="yx-chip yx-p2">p &lt; 0.10</span></span><span><span class="yx-chip yx-p3">not significant</span></span><span>— variable not in that model</span></p>
+      <h3>Valores p según la especificación</h3>
+      <p class="yx-legend"><span><span class="yx-chip yx-p1">p &lt; 0.05</span></span><span><span class="yx-chip yx-p2">p &lt; 0.10</span></span><span><span class="yx-chip yx-p3">no significativo</span></span><span>— variable no incluida en ese modelo</span></p>
       <div class="yx-tablewrap">
         <table class="yx-table" id="robust-table" data-source="robustness" data-row-key="spec_id">
           <thead><tr>
-            <th data-field="specification">Specification</th>
+            <th data-field="specification">Especificación</th>
             <th data-field="n_obs">N</th>
-            <th data-field="p_country_risk">Country risk</th>
+            <th data-field="p_country_risk">Riesgo país</th>
             <th data-field="p_ccl">CCL</th>
             <th data-field="p_brent">Brent</th>
-            <th data-field="p_us_energy">US energy</th>
-            <th data-field="adj_r2">Adj. R²</th>
+            <th data-field="p_us_energy">Energía EE.UU.</th>
+            <th data-field="adj_r2">R² ajustado</th>
           </tr></thead>
           <tbody data-draw="robust-rows"></tbody>
         </table>
       </div>
-      <p class="yx-note">Adding the Merval lifts the fit sharply, but it is left out of the final model because YPF is one of its largest components, so the link is partly mechanical.</p>
+      <p class="yx-note">Agregar el Merval mejora mucho el ajuste, pero queda fuera del modelo final porque YPF es uno de sus principales componentes y la relación es en parte mecánica.</p>
     </div>
   </section>
 
   <section class="yx-section" id="method">
-    <h2>Methodology and data</h2>
+    <h2>Metodología y datos</h2>
     <div class="yx-method">
       <div>
-        <h3>Model</h3>
-        <p>YPF monthly log return = country risk (change, per 100 bp) + Brent (log change) + CCL (log change) + US energy sector net of oil + systemic-shock dummy (Feb 2009, Mar 2020) + expropriation dummy (Apr 2012). Estimated by OLS with HC1 robust errors.</p>
+        <h3>Modelo</h3>
+        <p>Retorno logarítmico mensual de YPF = riesgo país (variación, cada 100 pb) + Brent (var. log) + CCL (var. log) + sector energético de EE.UU. neto del petróleo + dummy de shock sistémico (feb. 2009, mar. 2020) + dummy de expropiación (abr. 2012). Estimado por MCO con errores robustos HC1.</p>
       </div>
       <div>
-        <h3>Why "net of oil"</h3>
-        <p>The S&amp;P 500 Energy index moves with crude. It enters as the residual of regressing it on Brent, so the shared part is credited to oil. This is an assumption: without it the fit is identical but Brent adds no information of its own.</p>
+        <h3>Por qué "neto del petróleo"</h3>
+        <p>El S&amp;P 500 Energy se mueve con el crudo. Entra como el residuo de regresarlo sobre el Brent, de modo que la parte compartida se atribuye al petróleo. Es un supuesto: sin él el ajuste es idéntico, pero el Brent no aporta información propia.</p>
       </div>
       <div>
-        <h3>CCL series</h3>
-        <p>Before Dec 2009, changes in the official BCRA rate at month-end; Dec 2009 to Jul 2013, the CCL implied by YPF's local share and ADR; from Aug 2013, the market CCL. Versions with no mechanical link to YPF give the same result.</p>
+        <h3>Serie del CCL</h3>
+        <p>Antes de dic. 2009, la variación del dólar oficial del BCRA a fin de mes; de dic. 2009 a jul. 2013, el CCL implícito entre la acción local de YPF y su ADR; desde ago. 2013, el CCL de mercado. Las versiones sin vínculo mecánico con YPF dan el mismo resultado.</p>
       </div>
       <div>
-        <h3>Sources</h3>
-        <p>YPF ADR, Brent and S&amp;P 500 Energy: Investing.com. Country risk (JP Morgan EMBI Argentina): Rava Bursátil. Official exchange rate: BCRA. CCL: valordolarblue and Rava. Analysis and charts: own work in Excel and Python.</p>
+        <h3>Fuentes</h3>
+        <p>ADR de YPF, Brent y S&amp;P 500 Energy: Investing.com. Riesgo país (EMBI Argentina de JP Morgan): Rava Bursátil. Dólar oficial: BCRA. CCL: valordolarblue y Rava. Análisis y gráficos: elaboración propia en Excel y Python.</p>
       </div>
     </div>
   </section>
 
   <footer class="yx-foot">
-    <p>Interpretation note: the results describe statistical association over the sample and are consistent with, not proof of, the mechanisms discussed.</p>
+    <p>Nota de interpretación: los resultados describen asociaciones estadísticas en la muestra y son consistentes con los mecanismos discutidos, sin probarlos.</p>
     <p>Matías Batalla · Licenciatura en Economía, UNAJ</p>
   </footer>
 </div>
@@ -915,13 +915,13 @@ month,ypf_return,country_risk_change_bp,brent_log_change,ccl_log_change,us_energ
 </script>
 <script type="text/csv" data-id="model_coefficients">
 term,label,group,coef,std_error,p_value,ci_low,ci_high,se_type
-intercept,Intercept,control,0.0116984401279095,0.00704916723852223,0.0980571185359794,-0.002174320997502248,0.025571201253321248,robust HC1
-country_risk,"Country risk (EMBI, per 100 bp change)",domestic,-0.00364388532131572,0.00216187941156845,0.0929355594101726,-0.00789846400328243,0.0006106933606509896,robust HC1
-brent,Brent oil (log change),global,0.39931129901929,0.0759479022685533,2.787744794096e-07,0.24984582735477712,0.5487767706838029,robust HC1
-ccl,CCL exchange rate (log change),domestic,-0.415292429561828,0.111824284804133,0.000243690873772295,-0.6353626220563617,-0.19522223706729425,robust HC1
-us_energy,"US energy sector, net of oil",global,0.726234950276532,0.138629377493005,3.06394163137288e-07,0.4534123353702981,0.9990575651827658,robust HC1
-systemic_dummy,"Systemic shock dummy (2009, 2020)",shock,-0.267669506530121,0.0918833153411211,0.00384874708266287,-0.4484958711214473,-0.0868431419387947,classic
-regulatory_dummy,Expropriation dummy (Apr 2012),shock,-0.659979391466486,0.12129672265015,1.10654496031491e-07,-0.8986913416419812,-0.4212674412909908,classic
+intercept,Constante,control,0.0116984401279095,0.00704916723852223,0.0980571185359794,-0.002174320997502248,0.025571201253321248,robusto HC1
+country_risk,"Riesgo país (EMBI, cada 100 pb)",domestic,-0.00364388532131572,0.00216187941156845,0.0929355594101726,-0.00789846400328243,0.0006106933606509896,robusto HC1
+brent,Petróleo Brent (var. log),global,0.39931129901929,0.0759479022685533,2.787744794096e-07,0.24984582735477712,0.5487767706838029,robusto HC1
+ccl,Dólar CCL (var. log),domestic,-0.415292429561828,0.111824284804133,0.000243690873772295,-0.6353626220563617,-0.19522223706729425,robusto HC1
+us_energy,"Sector energético EE.UU., neto del petróleo",global,0.726234950276532,0.138629377493005,3.06394163137288e-07,0.4534123353702981,0.9990575651827658,robusto HC1
+systemic_dummy,"Dummy shock sistémico (2009, 2020)",shock,-0.267669506530121,0.0918833153411211,0.00384874708266287,-0.4484958711214473,-0.0868431419387947,clásico
+regulatory_dummy,Dummy expropiación (abr. 2012),shock,-0.659979391466486,0.12129672265015,1.10654496031491e-07,-0.8986913416419812,-0.4212674412909908,clásico
 </script>
 <script type="text/csv" data-id="model_fit">
 r2,adj_r2,n_obs,f_stat,resid_se,sample_start,sample_end
@@ -929,21 +929,21 @@ r2,adj_r2,n_obs,f_stat,resid_se,sample_start,sample_end
 </script>
 <script type="text/csv" data-id="robustness">
 spec_id,specification,n_obs,coef_country_risk,p_country_risk,coef_brent,p_brent,coef_ccl,p_ccl,coef_us_energy,p_us_energy,adj_r2
-1,Final model,305,-3.64388532131572e-05,0.0929355594101687,0.399311299019291,2.78774479409598e-07,-0.415292429561828,0.000243690873772301,0.726234950276532,3.06394163137274e-07,0.342947526639583
-2,US energy sector not netted of oil,305,-3.64388532131572e-05,0.092935559410168,0.0621854539523291,0.506469318039991,-0.415292429561828,0.000243690873772301,0.726234950276532,3.06394163137275e-07,0.342947526639583
-3,Without US energy sector,305,-3.35956986774505e-05,0.117848088794937,0.375125455490093,1.93969638559276e-06,-0.448053976140087,0.000220229711960966,,,0.278866584361736
-4,Without sector or CCL,305,-4.64858643363497e-05,0.0715433159644575,0.392208867386808,8.56852174206296e-07,,,,,0.219624636238958
-5,Official FX instead of CCL,305,-4.69245550773841e-05,0.0656503018303099,0.406125108163369,2.20918490435638e-07,-0.243163924223324,0.0596916038677218,0.757021185198219,2.81900700213597e-06,0.30624355679875
-6,CCL with no link to YPF quotes,304,-3.68594145127478e-05,0.0908307521073924,0.408224635568702,1.66970259664592e-07,-0.413616501507766,0.000561649998357684,0.740562023124555,1.90112055485407e-07,0.339419827772907
-7,Implied CCL (YPFD/ADR) full sample,305,-3.19286930967184e-05,0.164628363889888,0.417531541106908,6.85860267955352e-08,-0.448246699816539,4.91581041331681e-05,0.698611052200314,1.93074261172453e-07,0.356707030417736
-8,Excluding January 2002,304,-3.33645458934068e-05,0.105655476783488,0.400276950905592,3.25520934436617e-07,-0.495322114910663,7.75982428954899e-05,0.71923162649089,2.11337396191087e-07,0.347842877355463
-9,"Extra dummies: PASO 2019, Sep 2020",305,-3.54244590297708e-05,0.067777481446243,0.374552420056993,6.71445336204888e-07,-0.338943284441804,0.000130220541818031,0.654967898551609,1.72659291696618e-06,0.384141265746044
-10,From January 2006 (post-default),237,-0.000233509682315541,0.00463697227264735,0.298266397198533,0.00844751417350734,-0.411182970362676,0.000837361129755648,0.873056109726442,3.19196600185918e-07,0.398262179281583
-11,Sep 2013 – Sep 2025 only,145,-0.000305232105056488,0.001911812493097,0.508140171703604,0.000168273160244406,-0.406540137594603,0.00286854012758596,1.07193190957573,3.49836833949846e-07,0.407207889289514
-12,Country risk approximated at month-end,304,-5.93405869825175e-05,0.0604754153549187,0.390299668201985,4.05537494810325e-07,-0.402277494195498,0.000282165591493762,0.695577849562099,1.32778222482367e-06,0.34785797960528
-13,CCL from Rava (Mar 2010 – Jul 2013),305,-3.63983712630687e-05,0.0933498263770183,0.405463947084034,1.84715031749246e-07,-0.412171138566922,0.000312112610524441,0.741105361097749,1.75980451181574e-07,0.341572192294107
-14,Country risk at month-end close,305,-4.44193012588476e-05,0.134461713180851,0.388884283754776,6.15527038554926e-07,-0.393756078426778,0.000300153141233053,0.689878985041698,2.20380552883056e-06,0.353210424975043
-15,Adding the Merval index,305,-1.54124951101353e-05,0.403591029764801,0.140076439774826,0.087383579124412,-0.66372691292432,1.81015118215125e-13,0.308827558927145,0.0163846061496496,0.573085709567269
+1,Modelo final,305,-3.64388532131572e-05,0.0929355594101687,0.399311299019291,2.78774479409598e-07,-0.415292429561828,0.000243690873772301,0.726234950276532,3.06394163137274e-07,0.342947526639583
+2,Sector EE.UU. sin neutralizar del petróleo,305,-3.64388532131572e-05,0.092935559410168,0.0621854539523291,0.506469318039991,-0.415292429561828,0.000243690873772301,0.726234950276532,3.06394163137275e-07,0.342947526639583
+3,Sin sector energético,305,-3.35956986774505e-05,0.117848088794937,0.375125455490093,1.93969638559276e-06,-0.448053976140087,0.000220229711960966,,,0.278866584361736
+4,Sin sector ni CCL,305,-4.64858643363497e-05,0.0715433159644575,0.392208867386808,8.56852174206296e-07,,,,,0.219624636238958
+5,Dólar oficial en lugar del CCL,305,-4.69245550773841e-05,0.0656503018303099,0.406125108163369,2.20918490435638e-07,-0.243163924223324,0.0596916038677218,0.757021185198219,2.81900700213597e-06,0.30624355679875
+6,CCL sin vínculo con la cotización de YPF,304,-3.68594145127478e-05,0.0908307521073924,0.408224635568702,1.66970259664592e-07,-0.413616501507766,0.000561649998357684,0.740562023124555,1.90112055485407e-07,0.339419827772907
+7,CCL implícito (YPFD/ADR) en toda la muestra,305,-3.19286930967184e-05,0.164628363889888,0.417531541106908,6.85860267955352e-08,-0.448246699816539,4.91581041331681e-05,0.698611052200314,1.93074261172453e-07,0.356707030417736
+8,Excluyendo enero de 2002,304,-3.33645458934068e-05,0.105655476783488,0.400276950905592,3.25520934436617e-07,-0.495322114910663,7.75982428954899e-05,0.71923162649089,2.11337396191087e-07,0.347842877355463
+9,Dummies extra: PASO 2019 y sep. 2020,305,-3.54244590297708e-05,0.067777481446243,0.374552420056993,6.71445336204888e-07,-0.338943284441804,0.000130220541818031,0.654967898551609,1.72659291696618e-06,0.384141265746044
+10,Desde enero de 2006 (post default),237,-0.000233509682315541,0.00463697227264735,0.298266397198533,0.00844751417350734,-0.411182970362676,0.000837361129755648,0.873056109726442,3.19196600185918e-07,0.398262179281583
+11,Solo sep. 2013 – sep. 2025,145,-0.000305232105056488,0.001911812493097,0.508140171703604,0.000168273160244406,-0.406540137594603,0.00286854012758596,1.07193190957573,3.49836833949846e-07,0.407207889289514
+12,Riesgo país aproximado a fin de mes,304,-5.93405869825175e-05,0.0604754153549187,0.390299668201985,4.05537494810325e-07,-0.402277494195498,0.000282165591493762,0.695577849562099,1.32778222482367e-06,0.34785797960528
+13,CCL de Rava (mar. 2010 – jul. 2013),305,-3.63983712630687e-05,0.0933498263770183,0.405463947084034,1.84715031749246e-07,-0.412171138566922,0.000312112610524441,0.741105361097749,1.75980451181574e-07,0.341572192294107
+14,Riesgo país al cierre de mes,305,-4.44193012588476e-05,0.134461713180851,0.388884283754776,6.15527038554926e-07,-0.393756078426778,0.000300153141233053,0.689878985041698,2.20380552883056e-06,0.353210424975043
+15,Agregando el Merval,305,-1.54124951101353e-05,0.403591029764801,0.140076439774826,0.087383579124412,-0.66372691292432,1.81015118215125e-13,0.308827558927145,0.0163846061496496,0.573085709567269
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>
@@ -970,8 +970,8 @@ spec_id,specification,n_obs,coef_country_risk,p_country_risk,coef_brent,p_brent,
 <script>
 dash.calc('price_stats', {
   inputs: ['ypf_monthly'],
-  title: 'YPF return statistics',
-  description: 'Annualized volatility of monthly log returns, and the largest peak-to-trough fall in the ADR close.',
+  title: 'Estadísticas de retorno de YPF',
+  description: 'Volatilidad anualizada de los retornos mensuales y la mayor caída desde un pico en el cierre del ADR.',
   fn: (ypf_monthly) => {
     const r = ypf_monthly.map((d) => d.ypf_return_log).filter((v) => v !== '' && v != null).map(Number);
     const m = r.reduce((a, b) => a + b, 0) / r.length;
@@ -988,8 +988,8 @@ dash.calc('price_stats', {
 
 dash.calc('std_effects', {
   inputs: ['model_base', 'model_coefficients'],
-  title: 'Effect of a typical month',
-  description: 'Each coefficient times the standard deviation of its variable (country risk is per 100 bp): the change in the monthly log return after a one-SD move.',
+  title: 'Efecto de un mes típico',
+  description: 'Cada coeficiente por el desvío estándar de su variable (riesgo país cada 100 pb): el cambio en el retorno mensual ante un movimiento de un desvío.',
   fn: (model_base, model_coefficients) => {
     const col = {country_risk: 'country_risk_change_bp', brent: 'brent_log_change', ccl: 'ccl_log_change', us_energy: 'us_energy_net_of_oil'};
     const sd = (k) => {
@@ -1006,8 +1006,8 @@ dash.calc('std_effects', {
 
 dash.calc('bivariate', {
   inputs: ['model_base'],
-  title: 'One-variable fits',
-  description: 'Slope, intercept and correlation of YPF\'s monthly return on each driver alone (country risk in units of 100 bp).',
+  title: 'Ajustes con una variable',
+  description: 'Pendiente, constante y correlación del retorno mensual de YPF contra cada variable sola (riesgo país en unidades de 100 pb).',
   fn: (model_base) => {
     const col = {country_risk: 'country_risk_change_bp', brent: 'brent_log_change', ccl: 'ccl_log_change', us_energy: 'us_energy_net_of_oil'};
     const y = model_base.map((d) => Number(d.ypf_return));
@@ -1027,14 +1027,16 @@ dash.calc('bivariate', {
 
 <script>
 window.yx = window.yx || {};
+yx.loc = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['US$', ''], minus: '−'});
+yx.tloc = d3.timeFormatLocale({dateTime: '%x %X', date: '%d/%m/%Y', time: '%H:%M:%S', periods: ['', ''], days: ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'], shortDays: ['dom','lun','mar','mié','jue','vie','sáb'], months: ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'], shortMonths: ['ene.','feb.','mar.','abr.','may.','jun.','jul.','ago.','sep.','oct.','nov.','dic.']});
 yx.state = yx.state || {scatter: 'ccl'};
 yx.groupColor = (g) => g === 'domestic' ? dash.colors[0] : dash.colors[1];
-yx.sig = (p) => p < 0.001 ? '< 0.001' : d3.format('.3f')(p);
-yx.num = (v) => { const a = Math.abs(v); return (a < 0.01 ? d3.format('.4f')(v) : d3.format('.3f')(v)).replace('-', '−'); };
+yx.sig = (p) => p < 0.001 ? '< 0,001' : yx.loc.format('.3f')(p);
+yx.num = (v) => { const a = Math.abs(v); return (a < 0.01 ? yx.loc.format('.4f')(v) : yx.loc.format('.3f')(v)).replace('-', '−'); };
 yx.ok = (...ids) => ids.every((id) => dash.data(id).status === 'ok');
 yx.failed = (...ids) => ids.some((id) => ['error', 'connect', 'declined', 'missing'].includes(dash.data(id).status));
 yx.month = d3.utcParse('%Y-%m');
-yx.monthFmt = d3.utcFormat('%b %Y');
+yx.monthFmt = yx.tloc.utcFormat('%b %Y');
 yx.rows = (id) => dash.data(id).data || [];
 yx.findRow = (el, id) => {
   const w = el.getAttribute('data-where');
@@ -1044,7 +1046,7 @@ yx.findRow = (el, id) => {
 };
 yx.placeholder = (el, ids) => {
   el.classList.remove('dash-skeleton');
-  if (yx.failed(...ids)) { el.replaceChildren(); const f = document.createElement('div'); f.className = 'yx-fail'; f.textContent = 'Failed to load'; el.appendChild(f); return true; }
+  if (yx.failed(...ids)) { el.replaceChildren(); const f = document.createElement('div'); f.className = 'yx-fail'; f.textContent = 'No se pudo cargar'; el.appendChild(f); return true; }
   if (!yx.ok(...ids)) { el.replaceChildren(); el.classList.add('dash-skeleton'); return true; }
   return false;
 };
@@ -1058,25 +1060,25 @@ dash.onData(() => {
 dash.draw('fit', (el) => {
   if (!yx.ok('model_fit')) return yx.textOut(el, null);
   const r = yx.rows('model_fit')[0]; const f = el.getAttribute('data-field'); const v = r[f];
-  if (f === 'n_obs') return yx.textOut(el, d3.format(',')(Number(v)));
-  if (f === 'adj_r2') return yx.textOut(el, d3.format('.3f')(Number(v)));
-  if (f === 'f_stat') return yx.textOut(el, d3.format('.1f')(Number(v)));
-  if (f === 'sample_start' || f === 'sample_end') return yx.textOut(el, d3.utcFormat('%b %Y')(yx.month(v)));
+  if (f === 'n_obs') return yx.textOut(el, yx.loc.format(',')(Number(v)));
+  if (f === 'adj_r2') return yx.textOut(el, yx.loc.format('.3f')(Number(v)));
+  if (f === 'f_stat') return yx.textOut(el, yx.loc.format('.1f')(Number(v)));
+  if (f === 'sample_start' || f === 'sample_end') return yx.textOut(el, yx.tloc.utcFormat('%b %Y')(yx.month(v)));
   yx.textOut(el, v);
 });
 
 dash.draw('stat', (el) => {
   if (!yx.ok('price_stats')) return yx.textOut(el, null);
   const r = yx.rows('price_stats')[0]; const f = el.getAttribute('data-field');
-  if (f === 'ann_vol') return yx.textOut(el, d3.format('.1%')(r.ann_vol));
-  if (f === 'max_drawdown') return yx.textOut(el, d3.format('.1%')(r.max_drawdown));
+  if (f === 'ann_vol') return yx.textOut(el, yx.loc.format('.1%')(r.ann_vol));
+  if (f === 'max_drawdown') return yx.textOut(el, yx.loc.format('.1%')(r.max_drawdown));
   yx.textOut(el, yx.monthFmt(yx.month(r[f])));
 });
 
 dash.draw('eff', (el) => {
   if (!yx.ok('std_effects')) return yx.textOut(el, null);
   const r = yx.findRow(el, 'std_effects');
-  yx.textOut(el, r ? d3.format('+.1%')(r.effect).replace('-', '−') : null);
+  yx.textOut(el, r ? yx.loc.format('+.1%')(r.effect).replace('-', '−') : null);
 });
 
 dash.draw('pv', (el) => {
@@ -1091,7 +1093,7 @@ dash.draw('biv', (el) => {
   const r = yx.rows('bivariate').find((d) => d.term === yx.state.scatter);
   const f = el.getAttribute('data-field');
   el.setAttribute('data-where', 'term=' + yx.state.scatter);
-  yx.textOut(el, r ? (f === 'corr' ? d3.format('.2f')(r.corr) : yx.num(r.slope)) : null);
+  yx.textOut(el, r ? (f === 'corr' ? yx.loc.format('.2f')(r.corr) : yx.num(r.slope)) : null);
 });
 
 document.querySelectorAll('.yx-scatter-pick').forEach((sel) => {
@@ -1142,7 +1144,7 @@ yx.timeSeries = (el, pts, o) => {
   });
   const step = W < 420 ? 10 : 5;
   x.ticks(d3.utcYear.every(step)).forEach((t) => {
-    svg.append('text').attr('x', x(t)).attr('y', H - 6).attr('text-anchor', 'middle').text(d3.utcFormat('%Y')(t));
+    svg.append('text').attr('x', x(t)).attr('y', H - 6).attr('text-anchor', 'middle').text(yx.tloc.utcFormat('%Y')(t));
   });
   svg.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', H - 26).attr('y2', H - 26).attr('stroke', 'var(--cds-chart-axis)');
   (o.events || []).forEach((e) => {
@@ -1180,8 +1182,8 @@ dash.draw('price', (el) => {
   const pts = yx.rows('ypf_monthly').map((d) => ({date: yx.month(d.month), v: Number(d.ypf_adr_usd), r: d.ypf_return_log === '' ? null : Number(d.ypf_return_log)}));
   const events = [['A', '2001-12'], ['B', '2009-02'], ['C', '2012-04'], ['D', '2019-08'], ['E', '2020-03']].map(([letter, m]) => ({letter, date: yx.month(m)}));
   yx.timeSeries(el, pts, {height: 300, log: true, color: dash.colors[0], area: true, events,
-    tickFmt: (t) => '$' + d3.format(',')(t), valFmt: (v) => 'Close $' + d3.format(',.2f')(v),
-    extra: (d) => d.r == null ? [] : ['Monthly return ' + d3.format('+.1%')(Math.exp(d.r) - 1)]});
+    tickFmt: (t) => 'US$' + yx.loc.format(',')(t), valFmt: (v) => 'Cierre US$' + yx.loc.format(',.2f')(v),
+    extra: (d) => d.r == null ? [] : ['Retorno mensual ' + yx.loc.format('+.1%')(Math.exp(d.r) - 1)]});
 });
 
 dash.draw('driver', (el) => {
@@ -1189,10 +1191,10 @@ dash.draw('driver', (el) => {
   const v = el.getAttribute('data-var'); const log = el.getAttribute('data-log') === '1';
   const pts = yx.rows('ypf_monthly').map((d) => ({date: yx.month(d.month), v: Number(d[v])})).filter((d) => d.v > 0);
   const fmts = {
-    brent_usd: [(t) => '$' + d3.format(',')(t), (x) => '$' + d3.format(',.2f')(x) + ' per barrel'],
-    us_energy_index: [(t) => d3.format(',')(t), (x) => d3.format(',.1f')(x) + ' index points'],
-    ccl_ars_usd: [(t) => d3.format(',')(t), (x) => d3.format(',.2f')(x) + ' ARS per USD'],
-    country_risk_bp: [(t) => d3.format(',')(t), (x) => d3.format(',.0f')(x) + ' bp']
+    brent_usd: [(t) => 'US$' + yx.loc.format(',')(t), (x) => 'US$' + yx.loc.format(',.2f')(x) + ' por barril'],
+    us_energy_index: [(t) => yx.loc.format(',')(t), (x) => yx.loc.format(',.1f')(x) + ' puntos'],
+    ccl_ars_usd: [(t) => yx.loc.format(',')(t), (x) => yx.loc.format(',.2f')(x) + ' ARS por USD'],
+    country_risk_bp: [(t) => yx.loc.format(',')(t), (x) => yx.loc.format(',.0f')(x) + ' pb']
   }[v];
   yx.timeSeries(el, pts, {height: 180, log, color: yx.groupColor(el.getAttribute('data-group')), tickFmt: fmts[0], valFmt: fmts[1]});
 });
@@ -1203,7 +1205,7 @@ dash.draw('effects', (el) => {
   const rows = yx.rows('std_effects').slice().sort((a, b) => Math.abs(b.effect) - Math.abs(a.effect));
   const W = Math.max(260, el.clientWidth), bh = 26, gap = 18, H = rows.length * (bh + gap) + 24;
   const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
-  const fmt = (v) => d3.format('+.1%')(v).replace('-', '−');
+  const fmt = (v) => yx.loc.format('+.1%')(v).replace('-', '−');
   const lw = Math.min(W * 0.42, Math.ceil(yx.measure(svg, rows.map((r) => r.label))) + 12);
   const vw = Math.ceil(yx.measure(svg, rows.map((r) => fmt(r.effect)))) + 8;
   const m = d3.max(rows, (r) => Math.abs(r.effect));
@@ -1220,7 +1222,7 @@ dash.draw('effects', (el) => {
     svg.append('text').attr('x', pos ? x(r.effect) + 6 : x(r.effect) - 6).attr('y', y0 + bh / 2).attr('dy', '0.32em')
       .attr('text-anchor', pos ? 'start' : 'end').attr('class', 'yx-strong').attr('font-weight', 600).text(fmt(r.effect));
   });
-  svg.append('text').attr('x', x(0)).attr('y', H - 4).attr('text-anchor', 'middle').text('0 · faded bar = p ≥ 0.05');
+  svg.append('text').attr('x', x(0)).attr('y', H - 4).attr('text-anchor', 'middle').text('0 · barra tenue = p ≥ 0,05');
 });
 
 dash.draw('scatter', (el) => {
@@ -1233,13 +1235,13 @@ dash.draw('scatter', (el) => {
   const pts = yx.rows('model_base').map((d) => ({m: d.month, x: Number(d[col]), y: Number(d.ypf_return), shock: d.systemic_dummy === '1' || d.regulatory_dummy === '1' || Number(d.systemic_dummy) === 1 || Number(d.regulatory_dummy) === 1}));
   const W = Math.max(260, el.clientWidth), H = 260;
   const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
-  const xf = term === 'country_risk' ? (v) => d3.format('+,')(Math.round(v)) + ' bp' : (v) => d3.format('+.0%')(v);
+  const xf = term === 'country_risk' ? (v) => yx.loc.format('+,')(Math.round(v)) + ' pb' : (v) => yx.loc.format('+.0%')(v);
   const y = d3.scaleLinear().domain(d3.extent(pts, (d) => d.y)).range([H - 26, 10]).nice();
-  const yt = y.ticks(5); const ml = Math.ceil(yx.measure(svg, yt.map(d3.format('+.0%')))) + 10;
+  const yt = y.ticks(5); const ml = Math.ceil(yx.measure(svg, yt.map(yx.loc.format('+.0%')))) + 10;
   const x = d3.scaleLinear().domain(d3.extent(pts, (d) => d.x)).range([ml, W - 14]).nice();
   yt.forEach((t) => {
     svg.append('line').attr('x1', ml).attr('x2', W - 14).attr('y1', y(t)).attr('y2', y(t)).attr('stroke', t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
-    svg.append('text').attr('x', ml - 8).attr('y', y(t)).attr('dy', '0.32em').attr('text-anchor', 'end').text(d3.format('+.0%')(t));
+    svg.append('text').attr('x', ml - 8).attr('y', y(t)).attr('dy', '0.32em').attr('text-anchor', 'end').text(yx.loc.format('+.0%')(t));
   });
   x.ticks(W < 420 ? 3 : 5).forEach((t) => {
     svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', 10).attr('y2', H - 26).attr('stroke', t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
@@ -1261,7 +1263,7 @@ dash.draw('scatter', (el) => {
       const [px, py] = d3.pointer(ev); const d = pts[del.find(px, py)];
       hl.style('display', null).attr('cx', x(d.x)).attr('cy', y(d.y));
       const s = el.clientWidth / W;
-      yx.tipLines(tip, yx.monthFmt(yx.month(d.m)), ['YPF return ' + d3.format('+.1%')(Math.exp(d.y) - 1), 'Driver ' + (term === 'country_risk' ? d3.format('+,.0f')(d.x) + ' bp' : d3.format('+.1%')(d.x))]);
+      yx.tipLines(tip, yx.monthFmt(yx.month(d.m)), ['Retorno YPF ' + yx.loc.format('+.1%')(Math.exp(d.y) - 1), 'Variable ' + (term === 'country_risk' ? yx.loc.format('+,.0f')(d.x) + ' pb' : yx.loc.format('+.1%')(d.x))]);
       yx.placeTip(el, tip, x(d.x) * s, y(d.y) * s);
     })
     .on('pointerleave', () => { hl.style('display', 'none'); tip.hidden = true; });
@@ -1289,7 +1291,7 @@ dash.draw('robust-rows', (tb) => {
   yx.rows('robustness').forEach((r) => {
     const tr = document.createElement('tr'); tr.setAttribute('data-key', r.spec_id);
     if (String(r.spec_id) === '1') tr.className = 'yx-final';
-    const cells = [r.specification, d3.format(',')(Number(r.n_obs))];
+    const cells = [r.specification, yx.loc.format(',')(Number(r.n_obs))];
     tr.appendChild(Object.assign(document.createElement('td'), {textContent: cells[0]}));
     tr.appendChild(Object.assign(document.createElement('td'), {textContent: cells[1]}));
     ['p_country_risk', 'p_ccl', 'p_brent', 'p_us_energy'].forEach((k) => {
@@ -1298,7 +1300,7 @@ dash.draw('robust-rows', (tb) => {
       else { const p = Number(r[k]); const c = document.createElement('span'); c.className = 'yx-chip ' + (p < 0.05 ? 'yx-p1' : p < 0.1 ? 'yx-p2' : 'yx-p3'); c.textContent = yx.sig(p); td.appendChild(c); }
       tr.appendChild(td);
     });
-    tr.appendChild(Object.assign(document.createElement('td'), {textContent: d3.format('.3f')(Number(r.adj_r2))}));
+    tr.appendChild(Object.assign(document.createElement('td'), {textContent: yx.loc.format('.3f')(Number(r.adj_r2))}));
     tb.appendChild(tr);
   });
 });
