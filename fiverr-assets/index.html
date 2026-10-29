@@ -1,0 +1,77 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>assets</title><style>
+html,body{margin:0;height:100%;background:#0f1b2d;overflow:hidden}
+
+*{box-sizing:border-box;margin:0}
+.stage{width:1280px;height:769px;font-family:Inter,"Segoe UI",Arial,sans-serif;background:#0f1b2d;color:#fff;overflow:hidden;position:relative;background:#0f1b2d;color:#fff}
+.wrap{display:flex;height:100%;padding:64px 64px}
+.l{width:560px;display:flex;flex-direction:column;justify-content:center}
+.tag{font-size:20px;letter-spacing:3px;color:#5eead4;font-weight:700;text-transform:uppercase;margin-bottom:22px}
+h1{font-size:60px;line-height:1.08;font-weight:800;margin-bottom:28px}
+h1 span{color:#5eead4}
+ul{list-style:none;font-size:25px;line-height:1.75;color:#cbd5e1}
+ul li:before{content:"✓  ";color:#5eead4;font-weight:800}
+.foot{margin-top:30px;font-size:20px;color:#94a3b8}
+.r{flex:1;display:flex;align-items:center;justify-content:center}
+.card{background:#fff;color:#0f172a;border-radius:18px;padding:28px;width:560px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.card h3{font-size:20px;margin-bottom:16px;color:#334155}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{background:#0f766e;color:#fff;padding:9px;text-align:right;font-weight:600}
+th:first-child,td:first-child{text-align:left}
+td{padding:9px;border-bottom:1px solid #e2e8f0;text-align:right}
+.neg{color:#b91c1c}.pos{color:#047857;font-weight:700}
+.bars{display:flex;align-items:flex-end;gap:14px;height:150px;margin-top:20px;border-bottom:2px solid #cbd5e1;padding:0 6px}
+.bars div{flex:1;background:#14b8a6;border-radius:5px 5px 0 0}
+.bars div.n{background:#f87171}
+.kpis{display:flex;gap:12px;margin-bottom:18px}
+.kpi{flex:1;background:#f1f5f9;border-radius:10px;padding:12px}
+.kpi b{display:block;font-size:26px}.kpi small{color:#64748b;font-size:14px}
+svg text{font-family:inherit}
+
+.stage{position:absolute;left:50%;top:50%;transform-origin:center}
+.v{display:none}
+</style></head><body>
+<div class="stage v" id="finance"><div class="wrap">
+<div class="l">
+<div class="tag">Excel · Finance</div>
+<h1>Financial models, <span>budgets</span> &amp; cash flow in Excel</h1>
+<ul><li>Cash flow &amp; budget forecasts</li><li>Financial models and KPIs</li><li>Clean, automated templates</li><li>Economist-led analysis</li></ul>
+<div class="foot">Matías B · Economist &amp; Data Analyst</div>
+</div>
+<div class="r"><div class="card"><h3>Cash flow forecast · 2026</h3>
+<div class="kpis"><div class="kpi"><small>Revenue</small><b>$1.24M</b></div><div class="kpi"><small>EBITDA margin</small><b>18.6%</b></div><div class="kpi"><small>Runway</small><b>14 mo</b></div></div>
+<table><tr><th>Item</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr>
+<tr><td>Sales</td><td>280k</td><td>305k</td><td>318k</td><td>342k</td></tr>
+<tr><td>Costs</td><td class="neg">-212k</td><td class="neg">-226k</td><td class="neg">-231k</td><td class="neg">-240k</td></tr>
+<tr><td>Net cash flow</td><td class="pos">68k</td><td class="pos">79k</td><td class="pos">87k</td><td class="pos">102k</td></tr></table>
+<div class="bars"><div style="height:45%"></div><div style="height:58%"></div><div class="n" style="height:22%"></div><div style="height:66%"></div><div style="height:74%"></div><div style="height:90%"></div></div></div></div>
+</div></div>
+<div class="stage v" id="data"><div class="wrap">
+<div class="l">
+<div class="tag">Python · Excel · SQL</div>
+<h1>Data <span>cleaning</span>, analysis &amp; visualization</h1>
+<ul><li>Clean messy Excel / CSV data</li><li>Python (Pandas) analysis</li><li>Clear charts and reports</li><li>Insights you can act on</li></ul>
+<div class="foot">Matías B · Economist &amp; Data Analyst</div>
+</div>
+<div class="r"><div class="card"><h3>Sales analysis · cleaned dataset</h3>
+<div class="kpis"><div class="kpi"><small>Rows cleaned</small><b>48,210</b></div><div class="kpi"><small>Duplicates removed</small><b>1,932</b></div><div class="kpi"><small>Growth YoY</small><b>+12.4%</b></div></div>
+<svg width="504" height="230" viewBox="0 0 504 230"><g stroke="#e2e8f0">
+<line x1="30" y1="20" x2="500" y2="20"/><line x1="30" y1="80" x2="500" y2="80"/><line x1="30" y1="140" x2="500" y2="140"/><line x1="30" y1="200" x2="500" y2="200"/></g>
+<polyline fill="none" stroke="#14b8a6" stroke-width="4" points="30,170 75,160 120,150 165,155 210,128 255,120 300,104 345,110 390,82 435,70 480,52"/>
+<polyline fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6 6" points="30,185 75,180 120,176 165,170 210,166 255,160 300,150 345,148 390,140 435,134 480,126"/>
+<g fill="#14b8a6"><circle cx="480" cy="52" r="6"/></g>
+<text x="380" y="40" font-size="15" fill="#0f766e" font-weight="700">2026</text><text x="420" y="118" font-size="15" fill="#64748b">2025</text>
+</svg></div></div>
+</div></div>
+<div class="stage v" id="bellabeat"><div class="wrap" style="flex-direction:column;padding:56px 64px">
+<div class="tag">SQL · Python · Data analysis</div>
+<h1 style="font-size:48px;margin-bottom:10px">BellaBeat case: what really drives <span>sleep</span>?</h1>
+<p style="font-size:22px;color:#cbd5e1;margin-bottom:26px">Wearable users (FitBit data) · sedentary time explains sleep (r = −0.60), steps don't (r = −0.19)</p>
+<div style="display:flex;gap:24px;flex:1;min-height:0">
+<div class="card" style="width:auto;flex:1;padding:14px;overflow:hidden;display:flex;align-items:center"><img src="bb1.png" style="width:100%"></div>
+<div class="card" style="width:auto;flex:1;padding:14px;overflow:hidden;display:flex;align-items:center"><img src="bb2.png" style="width:100%"></div>
+</div></div></div>
+<script>
+function show(){const id=(location.hash||'#finance').slice(1);document.querySelectorAll('.v').forEach(e=>e.style.display=e.id===id?'block':'none');fit();}
+function fit(){const s=Math.min(innerWidth/1280,innerHeight/769);document.querySelectorAll('.stage').forEach(e=>e.style.transform=`translate(-50%,-50%) scale(${s})`);}
+addEventListener('hashchange',show);addEventListener('resize',fit);show();
+</script></body></html>
